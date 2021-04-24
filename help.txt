@@ -1,0 +1,13 @@
+virualenv venv   // to create virtual env
+source venv/bin/activate // to run virual env
+deactivate // desactivate the virual enviroment
+python src/app.py // to run the server
+docker build -t flaskapp . // to build 
+docker run -it flaskapp /bin/sh // to run
+pip freeze // to view py dependencies then save into requirements.txt
+docker run -it --publish 7000:4000 flaskapp // to run in port 4000 in docker and port 7000 in my env.
+
+docker run -it -p 7000:4000 -d flaskapp // -p publish shorter, and -d to run in backgroun
+
+docker images // to view images
+docker rmi <image-id> --force // to remove image
